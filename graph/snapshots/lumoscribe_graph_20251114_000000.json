@@ -1,0 +1,581 @@
+{
+  "graph": {
+    "name": "lumoscribe2033-hybrid-graph-rag",
+    "version": "0.1.0",
+    "description": "Hybrid Graph-RAG 质量平台关系图",
+    "created_at": "2025-11-14T00:00:00Z",
+    "last_modified": "2025-11-14T00:00:00Z",
+    "node_count": 40,
+    "edge_count": 18,
+    "graph_type": "directed",
+    "schema_version": "1.0"
+  },
+  "nodes": [
+    {
+      "type": "node_type",
+      "name": "project",
+      "description": "项目根节点",
+      "icon": "📁",
+      "is_meta": true,
+      "id": "type:project"
+    },
+    {
+      "type": "node_type",
+      "name": "module",
+      "description": "Python 模块",
+      "icon": "📄",
+      "is_meta": true,
+      "id": "type:module"
+    },
+    {
+      "type": "node_type",
+      "name": "class",
+      "description": "Python 类",
+      "icon": "🏛️",
+      "is_meta": true,
+      "id": "type:class"
+    },
+    {
+      "type": "node_type",
+      "name": "function",
+      "description": "Python 函数",
+      "icon": "⚙️",
+      "is_meta": true,
+      "id": "type:function"
+    },
+    {
+      "type": "node_type",
+      "name": "document",
+      "description": "文档文件",
+      "icon": "📖",
+      "is_meta": true,
+      "id": "type:document"
+    },
+    {
+      "type": "node_type",
+      "name": "speckit_artifact",
+      "description": "speckit 工件",
+      "icon": "🔧",
+      "is_meta": true,
+      "id": "type:speckit_artifact"
+    },
+    {
+      "type": "node_type",
+      "name": "compliance_report",
+      "description": "合规报告",
+      "icon": "📋",
+      "is_meta": true,
+      "id": "type:compliance_report"
+    },
+    {
+      "type": "node_type",
+      "name": "conversation",
+      "description": "对话记录",
+      "icon": "💬",
+      "is_meta": true,
+      "id": "type:conversation"
+    },
+    {
+      "type": "node_type",
+      "name": "best_practice",
+      "description": "最佳实践",
+      "icon": "⭐",
+      "is_meta": true,
+      "id": "type:best_practice"
+    },
+    {
+      "type": "node_type",
+      "name": "vector_collection",
+      "description": "向量集合",
+      "icon": "📊",
+      "is_meta": true,
+      "id": "type:vector_collection"
+    },
+    {
+      "type": "project",
+      "name": "lumoscribe2033",
+      "display_name": "Hybrid Graph-RAG 质量平台",
+      "description": "基于 speckit 的 AI 驱动质量提升平台",
+      "path": ".",
+      "language": "python",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "tags": [
+        "ai",
+        "rag",
+        "quality",
+        "speckit"
+      ],
+      "id": "project:lumoscribe2033"
+    },
+    {
+      "type": "module",
+      "name": "src.framework",
+      "display_name": "框架层基础设施",
+      "path": "src/framework",
+      "description": "框架层基础设施",
+      "layer": "framework",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "module:src.framework"
+    },
+    {
+      "type": "module",
+      "name": "src.framework.shared",
+      "display_name": "共享工具和配置",
+      "path": "src/framework/shared",
+      "description": "共享工具和配置",
+      "layer": "framework",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "module:src.framework.shared"
+    },
+    {
+      "type": "module",
+      "name": "src.framework.storage",
+      "display_name": "存储抽象层",
+      "path": "src/framework/storage",
+      "description": "存储抽象层",
+      "layer": "framework",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "module:src.framework.storage"
+    },
+    {
+      "type": "module",
+      "name": "src.framework.adapters",
+      "display_name": "适配器层",
+      "path": "src/framework/adapters",
+      "description": "适配器层",
+      "layer": "framework",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "module:src.framework.adapters"
+    },
+    {
+      "type": "class",
+      "name": "Config",
+      "display_name": "配置管理类",
+      "path": "src/framework/shared/config.py",
+      "description": "配置管理类",
+      "layer": "framework",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "class:Config"
+    },
+    {
+      "type": "class",
+      "name": "Logger",
+      "display_name": "日志管理类",
+      "path": "src/framework/shared/logging.py",
+      "description": "日志管理类",
+      "layer": "framework",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "class:Logger"
+    },
+    {
+      "type": "module",
+      "name": "src.domain",
+      "display_name": "领域层业务逻辑",
+      "path": "src/domain",
+      "description": "领域层业务逻辑",
+      "layer": "domain",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "module:src.domain"
+    },
+    {
+      "type": "module",
+      "name": "src.domain.pipeline",
+      "display_name": "speckit 自动化管线",
+      "path": "src/domain/pipeline",
+      "description": "speckit 自动化管线",
+      "layer": "domain",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "module:src.domain.pipeline"
+    },
+    {
+      "type": "module",
+      "name": "src.domain.doc_review",
+      "display_name": "文档三分法评估",
+      "path": "src/domain/doc_review",
+      "description": "文档三分法评估",
+      "layer": "domain",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "module:src.domain.doc_review"
+    },
+    {
+      "type": "module",
+      "name": "src.domain.compliance",
+      "display_name": "静态检查与可追溯性",
+      "path": "src/domain/compliance",
+      "description": "静态检查与可追溯性",
+      "layer": "domain",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "module:src.domain.compliance"
+    },
+    {
+      "type": "module",
+      "name": "src.domain.knowledge",
+      "display_name": "最佳实践与对话溯源",
+      "path": "src/domain/knowledge",
+      "description": "最佳实践与对话溯源",
+      "layer": "domain",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "module:src.domain.knowledge"
+    },
+    {
+      "type": "module",
+      "name": "src.api",
+      "display_name": "FastAPI 接口层",
+      "path": "src/api",
+      "description": "FastAPI 接口层",
+      "layer": "api",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "module:src.api"
+    },
+    {
+      "type": "module",
+      "name": "src.api.routes",
+      "display_name": "API 路由",
+      "path": "src/api/routes",
+      "description": "API 路由",
+      "layer": "api",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "module:src.api.routes"
+    },
+    {
+      "type": "function",
+      "name": "create_agent",
+      "display_name": "创建 AI 代理函数",
+      "path": "src/api/routes/speckit.py",
+      "description": "创建 AI 代理函数",
+      "layer": "api",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "function:create_agent"
+    },
+    {
+      "type": "function",
+      "name": "run_pipeline",
+      "display_name": "运行 speckit 管线函数",
+      "path": "src/api/routes/speckit.py",
+      "description": "运行 speckit 管线函数",
+      "layer": "api",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "function:run_pipeline"
+    },
+    {
+      "type": "document",
+      "name": "README.md",
+      "display_name": "项目说明文档",
+      "path": "README.md",
+      "description": "项目说明文档",
+      "format": "markdown",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "document:README.md"
+    },
+    {
+      "type": "document",
+      "name": "specs/001-hybrid-rag-platform/spec.md",
+      "display_name": "项目规格文档",
+      "path": "specs/001-hybrid-rag-platform/spec.md",
+      "description": "项目规格文档",
+      "format": "markdown",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "document:specs/001-hybrid-rag-platform/spec.md"
+    },
+    {
+      "type": "document",
+      "name": "docs/internal/logs.md",
+      "display_name": "内部日志文档",
+      "path": "docs/internal/logs.md",
+      "description": "内部日志文档",
+      "format": "markdown",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "document:docs/internal/logs.md"
+    },
+    {
+      "type": "document",
+      "name": "docs/external/user-guide.md",
+      "display_name": "用户指南",
+      "path": "docs/external/user-guide.md",
+      "description": "用户指南",
+      "format": "markdown",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "document:docs/external/user-guide.md"
+    },
+    {
+      "type": "speckit_artifact",
+      "name": "constitution",
+      "display_name": "项目章程",
+      "path": "artifacts/constitution",
+      "description": "项目章程",
+      "speckit_phase": "constitution",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "speckit_artifact:constitution"
+    },
+    {
+      "type": "speckit_artifact",
+      "name": "specify",
+      "display_name": "需求规格",
+      "path": "artifacts/specify",
+      "description": "需求规格",
+      "speckit_phase": "specify",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "speckit_artifact:specify"
+    },
+    {
+      "type": "speckit_artifact",
+      "name": "plan",
+      "display_name": "项目计划",
+      "path": "artifacts/plan",
+      "description": "项目计划",
+      "speckit_phase": "plan",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "speckit_artifact:plan"
+    },
+    {
+      "type": "speckit_artifact",
+      "name": "tasks",
+      "display_name": "任务分解",
+      "path": "artifacts/tasks",
+      "description": "任务分解",
+      "speckit_phase": "tasks",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "speckit_artifact:tasks"
+    },
+    {
+      "type": "speckit_artifact",
+      "name": "analyze",
+      "display_name": "分析报告",
+      "path": "artifacts/analyze",
+      "description": "分析报告",
+      "speckit_phase": "analyze",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "speckit_artifact:analyze"
+    },
+    {
+      "type": "speckit_artifact",
+      "name": "implement",
+      "display_name": "实现工件",
+      "path": "artifacts/implement",
+      "description": "实现工件",
+      "speckit_phase": "implement",
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "speckit_artifact:implement"
+    },
+    {
+      "type": "vector_collection",
+      "name": "documents",
+      "display_name": "文档向量集合",
+      "path": "vector/chroma/documents",
+      "description": "文档向量集合",
+      "embedding_model": "text-embedding-3-small",
+      "vector_count": 0,
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "vector_collection:documents"
+    },
+    {
+      "type": "vector_collection",
+      "name": "code_snippets",
+      "display_name": "代码片段向量集合",
+      "path": "vector/chroma/code_snippets",
+      "description": "代码片段向量集合",
+      "embedding_model": "text-embedding-3-small",
+      "vector_count": 0,
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "vector_collection:code_snippets"
+    },
+    {
+      "type": "vector_collection",
+      "name": "best_practices",
+      "display_name": "最佳实践向量集合",
+      "path": "vector/chroma/best_practices",
+      "description": "最佳实践向量集合",
+      "embedding_model": "text-embedding-3-small",
+      "vector_count": 0,
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "vector_collection:best_practices"
+    },
+    {
+      "type": "vector_collection",
+      "name": "conversations",
+      "display_name": "对话记录向量集合",
+      "path": "vector/chroma/conversation_records",
+      "description": "对话记录向量集合",
+      "embedding_model": "text-embedding-3-small",
+      "vector_count": 0,
+      "status": "active",
+      "created_at": "2025-11-14T00:00:00Z",
+      "id": "vector_collection:conversations"
+    }
+  ],
+  "edges": [
+    {
+      "type": "contains",
+      "description": "项目包含框架层",
+      "weight": 1.0,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "project:lumoscribe2033",
+      "target": "module:src.framework"
+    },
+    {
+      "type": "contains",
+      "description": "项目包含领域层",
+      "weight": 1.0,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "project:lumoscribe2033",
+      "target": "module:src.domain"
+    },
+    {
+      "type": "contains",
+      "description": "项目包含接口层",
+      "weight": 1.0,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "project:lumoscribe2033",
+      "target": "module:src.api"
+    },
+    {
+      "type": "contains",
+      "description": "项目包含说明文档",
+      "weight": 0.8,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "project:lumoscribe2033",
+      "target": "document:README.md"
+    },
+    {
+      "type": "contains",
+      "description": "框架层包含共享模块",
+      "weight": 1.0,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "module:src.framework",
+      "target": "module:src.framework.shared"
+    },
+    {
+      "type": "contains",
+      "description": "共享模块包含配置类",
+      "weight": 1.0,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "module:src.framework.shared",
+      "target": "class:Config"
+    },
+    {
+      "type": "configures",
+      "description": "配置类配置存储模块",
+      "weight": 0.9,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "class:Config",
+      "target": "module:src.framework.storage"
+    },
+    {
+      "type": "configures",
+      "description": "配置类配置向量集合",
+      "weight": 0.9,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "class:Config",
+      "target": "vector_collection:documents"
+    },
+    {
+      "type": "contains",
+      "description": "领域层包含管线模块",
+      "weight": 1.0,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "module:src.domain",
+      "target": "module:src.domain.pipeline"
+    },
+    {
+      "type": "contains",
+      "description": "领域层包含合规模块",
+      "weight": 1.0,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "module:src.domain",
+      "target": "module:src.domain.compliance"
+    },
+    {
+      "type": "depends_on",
+      "description": "领域层依赖框架层",
+      "weight": 0.9,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "module:src.domain",
+      "target": "module:src.framework"
+    },
+    {
+      "type": "contains",
+      "description": "API 层包含路由模块",
+      "weight": 1.0,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "module:src.api",
+      "target": "module:src.api.routes"
+    },
+    {
+      "type": "depends_on",
+      "description": "API 层依赖框架层",
+      "weight": 0.9,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "module:src.api",
+      "target": "module:src.framework"
+    },
+    {
+      "type": "contains",
+      "description": "路由模块包含创建代理函数",
+      "weight": 1.0,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "module:src.api.routes",
+      "target": "function:create_agent"
+    },
+    {
+      "type": "stored_in",
+      "description": "文档存储在向量集合中",
+      "weight": 0.8,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "document:README.md",
+      "target": "vector_collection:documents"
+    },
+    {
+      "type": "stored_in",
+      "description": "规格文档存储在向量集合中",
+      "weight": 0.8,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "document:specs/001-hybrid-rag-platform/spec.md",
+      "target": "vector_collection:documents"
+    },
+    {
+      "type": "processed_by",
+      "description": "章程工件由管线模块处理",
+      "weight": 1.0,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "speckit_artifact:constitution",
+      "target": "module:src.domain.pipeline"
+    },
+    {
+      "type": "analyzed_by",
+      "description": "分析工件由合规模块分析",
+      "weight": 1.0,
+      "created_at": "2025-11-14T00:00:00Z",
+      "source": "speckit_artifact:analyze",
+      "target": "module:src.domain.compliance"
+    }
+  ]
+}

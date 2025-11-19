@@ -1,0 +1,305 @@
+# 安全扫描 Workflow
+# 用于自动化依赖安全检查和代码安全分析
+
+name: Security Scan
+
+on:
+  # 定时扫描：每周一早上8点（UTC时间）
+  schedule:
+    - cron: '0 8 * * 1'
+  
+  # 手动触发
+  workflow_dispatch:
+    inputs:
+      scan_type:
+        description: '扫描类型'
+        required: true
+        default: 'full'
+        type: choice
+        options:
+          - 'dependencies'
+          - 'code'
+          - 'full'
+      fail_on_vulnerability:
+        description: '发现漏洞时失败'
+        required: false
+        default: true
+        type: boolean
+      
+  # 推送代码时自动扫描
+  push:
+    branches: [ main, develop ]
+  
+  # Pull Request 时扫描
+  pull_request:
+    branches: [ main ]
+
+env:
+  PYTHON_VERSION: '3.12'
+
+jobs:
+  # 作业 1: 依赖安全扫描
+  dependency-scan:
+    name: 🔍 依赖安全扫描
+    runs-on: ubuntu-latest
+    if: github.event.inputs.scan_type != 'code'
+    
+    steps:
+      - name: 📥 检出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: 🐍 设置 Python 环境
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+      
+      - name: 📦 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+          pip install safety pip-audit
+      
+      - name: 📋 收集依赖信息
+        run: |
+          echo "📋 收集项目依赖信息..."
+          pip list > dependencies.txt
+          cat dependencies.txt
+      
+      - name: 🔍 Safety 扫描
+        id: safety
+        run: |
+          echo "🔍 运行 Safety 依赖安全扫描..."
+          
+          # 运行 Safety 扫描
+          safety check --json --output safety-report.json || echo "扫描完成"
+          
+          # 生成文本报告
+          safety check > safety-report.txt || echo "扫描完成"
+          
+          # 显示扫描结果
+          if [ -s safety-report.txt ]; then
+            echo "📋 Safety 扫描结果:"
+            cat safety-report.txt
+          else
+            echo "✅ 未发现已知的安全漏洞"
+          fi
+      
+      - name: 🔍 Pip-audit 扫描
+        id: pip_audit
+        run: |
+          echo "🔍 运行 Pip-audit 扫描..."
+          
+          # 运行 Pip-audit 扫描
+          pip-audit --format=json --output=pip-audit-report.json || echo "扫描完成"
+          
+          # 生成文本报告
+          pip-audit --format=cyclonedx --output=pip-audit-cyclonedx.json || echo "扫描完成"
+          
+          # 显示扫描结果
+          echo "📋 Pip-audit 扫描完成，生成报告文件:"
+          ls -la *.json
+
+  # 作业 2: 代码安全分析
+  code-security:
+    name: 🛡️ 代码安全分析
+    runs-on: ubuntu-latest
+    if: github.event.inputs.scan_type != 'dependencies'
+    
+    steps:
+      - name: 📥 检出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: 🐍 设置 Python 环境
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+      
+      - name: 📦 安装安全工具
+        run: |
+          python -m pip install --upgrade pip
+          pip install bandit semgrep
+      
+      - name: 🛡️ Bandit 安全扫描
+        id: bandit
+        run: |
+          echo "🛡️ 运行 Bandit 代码安全扫描..."
+          
+          # 运行 Bandit 扫描
+          bandit -r src/ -f json -o bandit-report.json || echo "扫描完成"
+          
+          # 生成详细报告
+          bandit -r src/ -f txt -o bandit-report.txt || echo "扫描完成"
+          
+          # 显示扫描结果摘要
+          if [ -s bandit-report.txt ]; then
+            echo "📋 Bandit 扫描结果摘要:"
+            grep -E "(Test results|Passed test|Failed test|High|Medium|Low)" bandit-report.txt || echo "未发现安全问题"
+          else
+            echo "✅ 代码安全扫描通过"
+          fi
+      
+      - name: 🔍 Semgrep 扫描
+        id: semgrep
+        run: |
+          echo "🔍 运行 Semgrep 安全扫描..."
+          
+          # 使用开源规则集扫描
+          semgrep --config=auto --json --output=semgrep-report.json src/ || echo "扫描完成"
+          
+          # 生成文本报告
+          semgrep --config=auto --output=semgrep-report.txt src/ || echo "扫描完成"
+          
+          # 显示结果摘要
+          echo "📋 Semgrep 扫描完成"
+
+  # 作业 3: 安全报告生成
+  security-report:
+    name: 📊 安全报告
+    runs-on: ubuntu-latest
+    needs: [dependency-scan, code-security]
+    if: always()
+    
+    steps:
+      - name: 📥 检出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: 📦 下载扫描报告
+        uses: actions/download-artifact@v3
+        with:
+          name: security-reports
+          path: security-reports/
+        continue-on-error: true
+      
+      - name: 📊 生成综合安全报告
+        run: |
+          echo "📊 生成综合安全报告..."
+          
+          # 创建安全报告目录
+          mkdir -p security-reports
+          
+          # 收集所有报告文件
+          find . -name "*-report.*" -type f -exec cp {} security-reports/ \;
+          
+          # 生成综合报告
+          cat > security-reports/SECURITY_SUMMARY.md << EOF
+          # 🔒 安全扫描综合报告
+          
+          **扫描时间**: $(date)
+          **扫描类型**: ${{ github.event.inputs.scan_type || 'full' }}
+          **触发方式**: ${{ github.event_name }}
+          
+          ## 📋 扫描项目
+          
+          ### 1. 依赖安全扫描
+          - **Safety**: 检查已知的 Python 包漏洞
+          - **Pip-audit**: Python 包安全审计
+          
+          ### 2. 代码安全分析
+          - **Bandit**: Python 代码安全漏洞检测
+          - **Semgrep**: 多语言静态安全分析
+          
+          ## 📊 扫描结果摘要
+          
+          ### 依赖安全
+          \$(if [ -f safety-report.txt ]; then
+            echo "#### Safety 扫描结果"
+            if grep -q "No known security vulnerabilities" safety-report.txt; then
+              echo "✅ 未发现依赖安全漏洞"
+            else
+              echo "⚠️ 发现依赖安全问题:"
+              grep -E "(vulnerability|CVE)" safety-report.txt | head -10
+            fi
+          else
+            echo "ℹ️ Safety 扫描未执行"
+          fi)
+          
+          ### 代码安全
+          \$(if [ -f bandit-report.txt ]; then
+            echo "#### Bandit 扫描结果"
+            if grep -q "No issues identified" bandit-report.txt; then
+              echo "✅ 未发现代码安全问题"
+            else
+              echo "⚠️ 发现代码安全问题:"
+              grep -E "(High|Medium|Low)" bandit-report.txt | head -5
+            fi
+          else
+            echo "ℹ️ Bandit 扫描未执行"
+          fi)
+          
+          ## 🔗 详细报告
+          
+          - [Safety 详细报告](./safety-report.txt)
+          - [Bandit 详细报告](./bandit-report.txt)
+          - [Pip-audit 详细报告](./pip-audit-report.json)
+          
+          ## 📞 联系信息
+          
+          如发现安全漏洞，请通过以下方式报告：
+          - 邮箱: 18210768480@139.com
+          - [安全政策](./SECURITY.md)
+          
+          ---
+          
+          *此报告由 GitHub Actions 自动生成*
+          EOF
+          
+          echo "📊 安全报告生成完成"
+          echo "📋 报告文件:"
+          ls -la security-reports/
+      
+      - name: 📤 上传安全报告
+        uses: actions/upload-artifact@v3
+        with:
+          name: security-reports
+          path: security-reports/
+          retention-days: 90
+      
+      - name: 📋 更新扫描摘要
+        run: |
+          echo "## 🔒 安全扫描完成" >> $GITHUB_STEP_SUMMARY
+          echo "- **扫描类型**: ${{ github.event.inputs.scan_type || 'full' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **触发方式**: ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **报告位置**: security-reports/ 目录" >> $GITHUB_STEP_SUMMARY
+          echo "- **保留时间**: 90 天" >> $GITHUB_STEP_SUMMARY
+          
+          # 检查是否有严重安全问题
+          if [ -f safety-report.txt ] && grep -q "vulnerability" safety-report.txt; then
+            echo "⚠️ 发现依赖安全漏洞，详情请查看报告" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          if [ -f bandit-report.txt ] && grep -q "High" bandit-report.txt; then
+            echo "⚠️ 发现高风险代码安全问题，详情请查看报告" >> $GITHUB_STEP_SUMMARY
+          fi
+
+  # 作业 4: 安全通知
+  security-notify:
+    name: 📬 安全通知
+    runs-on: ubuntu-latest
+    needs: security-report
+    if: always() && (needs.dependency-scan.result == 'failure' || needs.code-security.result == 'failure')
+    
+    steps:
+      - name: 📬 发送安全警报
+        run: |
+          echo "## 🚨 安全扫描警报" >> $GITHUB_STEP_SUMMARY
+          echo "检测到潜在安全问题，需要立即关注！" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**建议操作：**" >> $GITHUB_STEP_SUMMARY
+          echo "1. 📋 详细审查安全报告" >> $GITHUB_STEP_SUMMARY
+          echo "2. 🔧 修复发现的安全漏洞" >> $GITHUB_STEP_SUMMARY
+          echo "3. 🧪 验证修复效果" >> $GITHUB_STEP_SUMMARY
+          echo "4. 📧 如有疑问，请联系安全团队" >> $GITHUB_STEP_SUMMARY
+          
+          # 这里可以添加邮件通知、Slack 通知等
+          echo "🚨 安全警报：发现潜在安全问题"

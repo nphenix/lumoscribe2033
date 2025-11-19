@@ -1,0 +1,845 @@
+openapi: 3.0.3
+info:
+  title: Hybrid Graph-RAG Phase 1 API
+  version: 0.1.0
+  description: >
+    **Hybrid Graph-RAG Phase 1 质量平台 API**
+    
+    本 API 提供了完整的 speckit 自动化流程、IDE 适配、文档评估、对话导入与合规追溯功能。
+    
+    ## 主要功能
+    - 🔧 **Speckit 自动化**: 一键执行 speckit 全流程（constitution → specify → plan → tasks）
+    - 🎯 **IDE 适配**: 自动生成 Cursor、RooCode 等 IDE 的适配包
+    - 📊 **文档评估**: 智能文档三分法评估（Agent/Developer/External）
+    - 💬 **对话管理**: IDE 对话自动导入和语义检索
+    - 🔍 **合规检查**: 代码静态检查和 Spec-to-Code 追溯
+    
+    ## 使用指南
+    1. 提交自然语言文档开始 speckit 流程
+    2. 生成 IDE 适配包以获得最佳开发体验
+    3. 定期运行文档评估确保质量
+    4. 导入对话记录建立知识库
+    5. 查看合规报告确保规范遵循
+    
+    ## 认证
+    本 API 当前为开发环境，无需认证。生产环境将支持 API Key 认证。
+    
+    ## 错误处理
+    所有错误响应都遵循 RFC 7807 问题详情格式：
+    ```json
+    {
+      "type": "https://example.com/probs/invalid-input",
+      "title": "Invalid input",
+      "status": 400,
+      "detail": "The request body is invalid",
+      "instance": "/api/v1/pipeline/run"
+    }
+    ```
+    
+    ## 速率限制
+    - 免费 tier: 100 请求/小时
+    - 企业 tier: 1000 请求/小时
+    
+    ## 版本历史
+    - **v0.1.0** (2025-11-16): 初始版本，支持基础 speckit 自动化流程
+    
+  contact:
+    name: Lumoscribe2033 Team
+    email: support@lumoscribe2033.com
+    url: https://github.com/lumoscribe2033
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  termsOfService: https://lumoscribe2033.com/terms
+externalDocs:
+  description: 项目文档
+  url: https://lumoscribe2033.com/docs
+servers:
+  - url: http://localhost:8080/api/v1
+    description: 开发服务器
+    variables:
+      port:
+        enum:
+          - '8080'
+          - '8000'
+        default: '8080'
+  - url: https://api.lumoscribe2033.com/v1
+    description: 生产服务器
+paths:
+  /pipeline/run:
+    post:
+      summary: 提交自然语言文档并运行 speckit 管线
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [source_path]
+              properties:
+                source_path:
+                  type: string
+                  description: 本地 txt/md 绝对路径
+                retry_of:
+                  type: string
+                  format: uuid
+                ide_targets:
+                  type: array
+                  items:
+                    type: string
+                    enum: [cursor, roocode]
+      responses:
+        '202':
+          description: 作业已排入队列
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  job_id:
+                    type: string
+                    format: uuid
+                  message:
+                    type: string
+  /ide-packages/generate:
+    post:
+      summary: 生成并验证 IDE 适配包
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [ide_type, submission_id]
+              properties:
+                ide_type:
+                  type: string
+                  enum: [cursor, roocode, custom]
+                submission_id:
+                  type: string
+                  format: uuid
+      responses:
+        '200':
+          description: 适配包已生成
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  package_path:
+                    type: string
+                  validation_report:
+                    type: object
+  /documents/evaluate:
+    post:
+      summary: 手动触发文档三分法评估
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [glob]
+              properties:
+                glob:
+                  type: string
+                  description: 匹配文件的 glob 表达式
+                submission_id:
+                  type: string
+                  format: uuid
+      responses:
+        '200':
+          description: 评估完成
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  profiles_created:
+                    type: integer
+                  findings:
+                    type: array
+                    items:
+                      type: object
+  /conversations/import:
+    post:
+      summary: 从目录或手工文件导入 AI 对话
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [source_type, path]
+              properties:
+                source_type:
+                  type: string
+                  enum: [cursor, roocode, manual]
+                path:
+                  type: string
+                submission_refs:
+                  type: array
+                  items:
+                    type: string
+                    format: uuid
+      responses:
+        '200':
+          description: 导入完成
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  conversations_ingested:
+                    type: integer
+  /best-practices/search:
+    get:
+      summary: 按场景检索最佳实践
+      parameters:
+        - in: query
+          name: query
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: stage
+          schema:
+            type: string
+            enum: [constitution, specify, plan, tasks, check]
+      responses:
+        '200':
+          description: 匹配的最佳实践
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        title:
+                          type: string
+                        pillar:
+                          type: string
+  /compliance/reports/{submission_id}:
+    get:
+      summary: 查询 speckit 静态检查报告
+      parameters:
+        - in: path
+          name: submission_id
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: 返回最近一次合规报告
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    enum: [pass, warn, fail]
+                  static_checks:
+                    type: array
+                    items:
+                      type: object
+                  doc_findings:
+                    type: array
+                    items:
+                      type: object
+                  traceability_gaps:
+                    type: array
+                    items:
+                      type: object
+
+
+
+components:
+  schemas:
+    PipelineRequest:
+      type: object
+      description: Speckit 管线执行请求
+      properties:
+        source_path:
+          type: string
+          description: 本地 txt/md 绝对路径
+          example: "/docs/requirements.md"
+        retry_of:
+          type: string
+          format: uuid
+          description: 重试的作业 ID
+          example: "550e8c44-8e34-4b13-8c22-6fad58e2b39a"
+        ide_targets:
+          type: array
+          items:
+            type: string
+            enum: [cursor, roocode]
+          description: 目标 IDE 类型列表
+          example: ["cursor", "roocode"]
+      required:
+        - source_path
+
+    PipelineResponse:
+      type: object
+      description: 管线提交响应
+      properties:
+        job_id:
+          type: string
+          format: uuid
+          description: 作业唯一标识符
+          example: "550e8c44-8e34-4b13-8c22-6fad58e2b39a"
+        message:
+          type: string
+          description: 执行状态消息
+          example: "Speckit 管线已启动，预计完成时间: 5-10 分钟"
+        estimated_duration:
+          type: integer
+          description: 预估执行时间（秒）
+          example: 300
+        progress_url:
+          type: string
+          format: uri
+          description: 进度查询 URL
+          example: "/api/v1/pipeline/status/550e8c44-8e34-4b13-8c22-6fad58e2b39a"
+
+    PipelineStatus:
+      type: object
+      description: 管线执行状态
+      properties:
+        job_id:
+          type: string
+          format: uuid
+          description: 作业 ID
+        status:
+          type: string
+          enum: [pending, running, completed, failed, cancelled]
+          description: 当前状态
+          example: "running"
+        progress:
+          type: integer
+          minimum: 0
+          maximum: 100
+          description: 完成百分比
+          example: 75
+        current_step:
+          type: string
+          description: 当前执行步骤
+          example: "speckit.plan"
+        message:
+          type: string
+          description: 状态描述
+          example: "正在执行 speckit.plan..."
+        start_time:
+          type: string
+          format: date-time
+          description: 开始时间
+          example: "2025-11-16T10:42:34Z"
+        end_time:
+          type: string
+          format: date-time
+          description: 结束时间（如果已完成）
+        estimated_completion:
+          type: string
+          format: date-time
+          description: 预估完成时间
+        error:
+          $ref: '#/components/schemas/ErrorDetail'
+
+    PipelineResults:
+      type: object
+      description: 管线执行结果
+      properties:
+        job_id:
+          type: string
+          format: uuid
+          description: 作业 ID
+        speckit_artifacts:
+          type: object
+          description: 生成的 speckit 工件
+          properties:
+            constitution:
+              type: string
+              description: 项目章程文件路径
+              example: "specs/001-hybrid-rag-platform/constitution.md"
+            spec:
+              type: string
+              description: 功能规范文件路径
+              example: "specs/001-hybrid-rag-platform/spec.md"
+            plan:
+              type: string
+              description: 实施计划文件路径
+              example: "specs/001-hybrid-rag-platform/plan.md"
+            tasks:
+              type: string
+              description: 任务列表文件路径
+              example: "specs/001-hybrid-rag-platform/tasks.md"
+        compliance_report:
+          type: string
+          description: 合规检查报告路径
+          example: "data/persistence/compliance/550e8c44-8e34-4b13-8c22-6fad58e2b39a.json"
+        ide_packages:
+          type: array
+          items:
+            type: string
+          description: 生成的 IDE 适配包路径列表
+          example: [".cursor/commands", ".roo/commands"]
+        execution_log:
+          type: string
+          description: 执行日志路径
+          example: "data/persistence/logs/550e8c44-8e34-4b13-8c22-6fad58e2b39a.log"
+        metrics:
+          type: object
+          description: 执行指标
+          properties:
+            duration_seconds:
+              type: number
+              description: 执行时长
+              example: 342.5
+            speckit_success_rate:
+              type: number
+              minimum: 0
+              maximum: 1
+              description: speckit 成功率
+              example: 1.0
+            compliance_score:
+              type: number
+              minimum: 0
+              maximum: 100
+              description: 合规评分
+              example: 95
+
+    IDEPackageRequest:
+      type: object
+      description: IDE 适配包生成请求
+      properties:
+        ide_type:
+          type: string
+          enum: [cursor, roocode, custom]
+          description: IDE 类型
+          example: "cursor"
+        submission_id:
+          type: string
+          format: uuid
+          description: 关联的提交作业 ID
+          example: "550e8c44-8e34-4b13-8c22-6fad58e2b39a"
+        options:
+          type: object
+          description: 生成选项
+          properties:
+            include_commands:
+              type: boolean
+              default: true
+              description: 是否包含命令文件
+            include_agents:
+              type: boolean
+              default: true
+              description: 是否包含 agents 文件
+            include_prompts:
+              type: boolean
+              default: true
+              description: 是否包含提示文件
+            custom_templates:
+              type: object
+              description: 自定义模板
+      required:
+        - ide_type
+        - submission_id
+
+    DocumentEvaluationRequest:
+      type: object
+      description: 文档评估请求
+      properties:
+        glob:
+          type: string
+          description: 匹配文件的 glob 表达式
+          example: "specs/**/*.md"
+        submission_id:
+          type: string
+          format: uuid
+          description: 关联的提交作业 ID
+          example: "550e8c44-8e34-4b13-8c22-6fad58e2b39a"
+        include_token_analysis:
+          type: boolean
+          default: true
+          description: 是否包含 token 分析（仅对 Agent 文档）
+        max_files:
+          type: integer
+          minimum: 1
+          maximum: 100
+          description: 最大处理文件数
+          example: 20
+
+    DocumentProfile:
+      type: object
+      description: 文档分析档案
+      properties:
+        file_path:
+          type: string
+          description: 文件路径
+          example: "specs/001/spec.md"
+        doc_type:
+          type: string
+          enum: [agent, developer, external]
+          description: 文档类型
+          example: "agent"
+        token_count:
+          type: integer
+          description: Token 数量（仅 Agent 文档）
+          example: 1500
+        structure_score:
+          type: number
+          minimum: 0
+          maximum: 100
+          description: 结构评分
+          example: 85.5
+        style_findings:
+          type: array
+          items:
+            $ref: '#/components/schemas/Finding'
+          description: 风格问题列表
+        recommendations:
+          type: array
+          items:
+            type: string
+          description: 改进建议列表
+
+    ConversationImportRequest:
+      type: object
+      description: 对话导入请求
+      properties:
+        source_type:
+          type: string
+          enum: [cursor, roocode, manual]
+          description: 源类型
+          example: "cursor"
+        path:
+          type: string
+          description: 文件或目录路径
+          example: "C:/Users/username/.cursor/logs"
+        submission_refs:
+          type: array
+          items:
+            type: string
+            format: uuid
+          description: 关联的提交作业 ID 列表
+          example: ["550e8c44-8e34-4b13-8c22-6fad58e2b39a"]
+        auto_detect:
+          type: boolean
+          default: true
+          description: 是否自动检测文件格式
+        recursive:
+          type: boolean
+          default: false
+          description: 是否递归扫描子目录
+
+    BestPracticeSearchRequest:
+      type: object
+      description: 最佳实践搜索请求
+      properties:
+        query:
+          type: string
+          description: 搜索查询
+          example: "speckit pipeline optimization"
+        stage:
+          type: string
+          enum: [constitution, specify, plan, tasks, check]
+          description: speckit 阶段
+          example: "plan"
+        pillar:
+          type: string
+          enum: [pipeline, ide, docs, compliance]
+          description: 实践支柱
+          example: "pipeline"
+        limit:
+          type: integer
+          minimum: 1
+          maximum: 100
+          default: 10
+          description: 返回结果数量
+
+    ComplianceReport:
+      type: object
+      description: 合规检查报告
+      properties:
+        submission_id:
+          type: string
+          format: uuid
+          description: 提交作业 ID
+        generated_at:
+          type: string
+          format: date-time
+          description: 生成时间
+        status:
+          type: string
+          enum: [pass, warn, fail]
+          description: 总体状态
+          example: "pass"
+        static_checks:
+          type: array
+          items:
+            $ref: '#/components/schemas/StaticCheckResult'
+          description: 静态检查结果
+        doc_findings:
+          type: array
+          items:
+            $ref: '#/components/schemas/Finding'
+          description: 文档问题列表
+        traceability_gaps:
+          type: array
+          items:
+            $ref: '#/components/schemas/TraceabilityGap'
+          description: 追溯性缺口列表
+
+    StaticCheckResult:
+      type: object
+      description: 静态检查结果
+      properties:
+        tool:
+          type: string
+          enum: [ruff, mypy, eslint]
+          description: 检查工具
+          example: "ruff"
+        file_path:
+          type: string
+          description: 文件路径
+          example: "src/api/main.py"
+        line:
+          type: integer
+          description: 行号
+          example: 42
+        column:
+          type: integer
+          description: 列号
+          example: 8
+        code:
+          type: string
+          description: 错误代码
+          example: "F401"
+        message:
+          type: string
+          description: 错误信息
+          example: "Module imported but unused"
+        severity:
+          type: string
+          enum: [error, warning, info]
+          description: 严重程度
+          example: "warning"
+
+    Finding:
+      type: object
+      description: 发现的问题
+      properties:
+        type:
+          type: string
+          description: 问题类型
+          example: "structure"
+        severity:
+          type: string
+          enum: [high, medium, low]
+          description: 严重程度
+          example: "medium"
+        message:
+          type: string
+          description: 问题描述
+          example: "缺少必要的章节结构"
+        file_path:
+          type: string
+          description: 相关文件路径
+          example: "docs/reference/system-architecture.md"
+        line:
+          type: integer
+          description: 行号（如果有）
+          example: 15
+        suggestion:
+          type: string
+          description: 修复建议
+          example: "添加系统架构图和组件关系说明"
+
+    TraceabilityGap:
+      type: object
+      description: 追溯性缺口
+      properties:
+        requirement_id:
+          type: string
+          description: 需求 ID
+          example: "FR-001"
+        implementation_files:
+          type: array
+          items:
+            type: string
+          description: 实现文件列表
+          example: ["src/api/main.py"]
+        status:
+          type: string
+          enum: [missing, partial, complete]
+          description: 实现状态
+          example: "missing"
+        confidence:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: 匹配置信度
+          example: 0.85
+
+    ErrorDetail:
+      type: object
+      description: 错误详情
+      properties:
+        type:
+          type: string
+          format: uri
+          description: 错误类型 URI
+          example: "https://example.com/probs/invalid-input"
+        title:
+          type: string
+          description: 错误标题
+          example: "Invalid input"
+        status:
+          type: integer
+          description: HTTP 状态码
+          example: 400
+        detail:
+          type: string
+          description: 错误详情
+          example: "The request body is invalid"
+        instance:
+          type: string
+          format: uri
+          description: 错误实例 URI
+          example: "/api/v1/pipeline/run"
+        errors:
+          type: array
+          items:
+            type: object
+            properties:
+              field:
+                type: string
+                description: 错误字段
+              message:
+                type: string
+                description: 字段错误信息
+
+  responses:
+    BadRequest:
+      description: 请求参数无效
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorDetail'
+          example:
+            type: "https://example.com/probs/invalid-input"
+            title: "Invalid input"
+            status: 400
+            detail: "The request body is invalid"
+            instance: "/api/v1/pipeline/run"
+            errors:
+              - field: "source_path"
+                message: "source_path is required"
+
+    NotFound:
+      description: 资源不存在
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorDetail'
+          example:
+            type: "https://example.com/probs/not-found"
+            title: "Resource not found"
+            status: 404
+            detail: "The specified resource was not found"
+            instance: "/api/v1/pipeline/status/550e8c44-8e34-4b13-8c22-6fad58e2b39a"
+
+    InternalServerError:
+      description: 服务器内部错误
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorDetail'
+          example:
+            type: "https://example.com/probs/internal-error"
+            title: "Internal server error"
+            status: 500
+            detail: "An unexpected error occurred"
+            instance: "/api/v1/pipeline/run"
+
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+      description: API 密钥认证
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT Bearer 认证
+
+tags:
+  - name: Pipeline
+    description: |
+      **Speckit 管线管理**
+      
+      管理 speckit 全流程自动化，包括：
+      - 提交自然语言文档启动管线
+      - 查询执行状态和进度
+      - 获取执行结果和工件
+      
+      支持重试机制、IDE 适配包生成和完整的执行追踪。
+      
+  - name: IDE
+    description: |
+      **IDE 适配管理**
+      
+      为不同 IDE 生成适配包，包括：
+      - Cursor IDE 适配
+      - RooCode IDE 适配
+      - 自定义 IDE 适配
+      
+      确保 IDE 能够正确调用 speckit 命令和遵循项目规范。
+      
+  - name: Documents
+    description: |
+      **文档评估**
+      
+      智能文档三分法评估，包括：
+      - 文档自动分类（Agent/Developer/External）
+      - 结构和风格评估
+      - Token 消耗分析（Agent 文档）
+      - 改进建议生成
+      
+  - name: Conversations
+    description: |
+      **对话管理**
+      
+      IDE 对话记录的导入和管理，包括：
+      - 自动扫描和解析对话文件
+      - 向量嵌入和语义检索
+      - 对话关联和追溯
+      - 知识图谱构建
+      
+  - name: BestPractices
+    description: |
+      **最佳实践**
+      
+      最佳实践库的管理和检索，包括：
+      - 按场景和阶段检索
+      - 实践条目增删改查
+      - 关联对话和工件
+      - 版本管理
+      
+  - name: Compliance
+    description: |
+      **合规检查**
+      
+      代码和文档的合规性检查，包括：
+      - 静态代码分析
+      - 文档规范检查
+      - Spec-to-Code 追溯
+      - 合规报告生成

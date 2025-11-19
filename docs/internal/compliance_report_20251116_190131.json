@@ -1,0 +1,2930 @@
+{
+  "timestamp": "2025-11-16T11:01:31.495812",
+  "total_checks": 124,
+  "passed_checks": 53,
+  "failed_checks": 71,
+  "warnings": 69,
+  "checks": [
+    {
+      "id": "DOC-002",
+      "name": "文档结构检查",
+      "description": "文档包含必需章节: # 概述",
+      "category": "structure",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 system-architecture.md 包含章节: # 概述",
+      "file_path": "docs\\reference\\system-architecture.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## 架构设计",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 system-architecture.md 缺少章节: ## 架构设计",
+      "file_path": "docs\\reference\\system-architecture.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## 数据模型",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 system-architecture.md 缺少章节: ## 数据模型",
+      "file_path": "docs\\reference\\system-architecture.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## API 接口",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 system-architecture.md 缺少章节: ## API 接口",
+      "file_path": "docs\\reference\\system-architecture.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-004",
+      "name": "禁忌内容检查",
+      "description": "文档包含禁忌内容: \\[?\\]",
+      "category": "content",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 system-architecture.md 包含禁忌内容: \\[?\\]",
+      "file_path": "docs\\reference\\system-architecture.md",
+      "line_number": null,
+      "suggestions": [
+        "移除 TODO/FIXME 等标记",
+        "完成未完成的内容",
+        "使用正式的描述"
+      ]
+    },
+    {
+      "id": "DOC-002",
+      "name": "文档结构检查",
+      "description": "文档包含必需章节: # 概述",
+      "category": "structure",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 best-practices.md 包含章节: # 概述",
+      "file_path": "docs\\reference\\best-practices.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## 架构设计",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 best-practices.md 缺少章节: ## 架构设计",
+      "file_path": "docs\\reference\\best-practices.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-002",
+      "name": "文档结构检查",
+      "description": "文档包含必需章节: ## 数据模型",
+      "category": "structure",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 best-practices.md 包含章节: ## 数据模型",
+      "file_path": "docs\\reference\\best-practices.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## API 接口",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 best-practices.md 缺少章节: ## API 接口",
+      "file_path": "docs\\reference\\best-practices.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-004",
+      "name": "禁忌内容检查",
+      "description": "文档包含禁忌内容: \\[?\\]",
+      "category": "content",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 best-practices.md 包含禁忌内容: \\[?\\]",
+      "file_path": "docs\\reference\\best-practices.md",
+      "line_number": null,
+      "suggestions": [
+        "移除 TODO/FIXME 等标记",
+        "完成未完成的内容",
+        "使用正式的描述"
+      ]
+    },
+    {
+      "id": "DOC-002",
+      "name": "文档结构检查",
+      "description": "文档包含必需章节: # 概述",
+      "category": "structure",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 api-examples.md 包含章节: # 概述",
+      "file_path": "docs\\external\\api-examples.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## 架构设计",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 api-examples.md 缺少章节: ## 架构设计",
+      "file_path": "docs\\external\\api-examples.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## 数据模型",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 api-examples.md 缺少章节: ## 数据模型",
+      "file_path": "docs\\external\\api-examples.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## API 接口",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 api-examples.md 缺少章节: ## API 接口",
+      "file_path": "docs\\external\\api-examples.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-004",
+      "name": "禁忌内容检查",
+      "description": "文档包含禁忌内容: \\[?\\]",
+      "category": "content",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 api-examples.md 包含禁忌内容: \\[?\\]",
+      "file_path": "docs\\external\\api-examples.md",
+      "line_number": null,
+      "suggestions": [
+        "移除 TODO/FIXME 等标记",
+        "完成未完成的内容",
+        "使用正式的描述"
+      ]
+    },
+    {
+      "id": "DOC-002",
+      "name": "文档结构检查",
+      "description": "文档包含必需章节: # 概述",
+      "category": "structure",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 metrics.md 包含章节: # 概述",
+      "file_path": "docs\\internal\\metrics.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## 架构设计",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 metrics.md 缺少章节: ## 架构设计",
+      "file_path": "docs\\internal\\metrics.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## 数据模型",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 metrics.md 缺少章节: ## 数据模型",
+      "file_path": "docs\\internal\\metrics.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## API 接口",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 metrics.md 缺少章节: ## API 接口",
+      "file_path": "docs\\internal\\metrics.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-004",
+      "name": "禁忌内容检查",
+      "description": "文档包含禁忌内容: \\[?\\]",
+      "category": "content",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 metrics.md 包含禁忌内容: \\[?\\]",
+      "file_path": "docs\\internal\\metrics.md",
+      "line_number": null,
+      "suggestions": [
+        "移除 TODO/FIXME 等标记",
+        "完成未完成的内容",
+        "使用正式的描述"
+      ]
+    },
+    {
+      "id": "DOC-002",
+      "name": "文档结构检查",
+      "description": "文档包含必需章节: # 概述",
+      "category": "structure",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 logs.md 包含章节: # 概述",
+      "file_path": "docs\\internal\\logs.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## 架构设计",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 logs.md 缺少章节: ## 架构设计",
+      "file_path": "docs\\internal\\logs.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## 数据模型",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 logs.md 缺少章节: ## 数据模型",
+      "file_path": "docs\\internal\\logs.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## API 接口",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 logs.md 缺少章节: ## API 接口",
+      "file_path": "docs\\internal\\logs.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-004",
+      "name": "禁忌内容检查",
+      "description": "文档包含禁忌内容: \\[?\\]",
+      "category": "content",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 logs.md 包含禁忌内容: \\[?\\]",
+      "file_path": "docs\\internal\\logs.md",
+      "line_number": null,
+      "suggestions": [
+        "移除 TODO/FIXME 等标记",
+        "完成未完成的内容",
+        "使用正式的描述"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: # 概述",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 spec.md 缺少章节: # 概述",
+      "file_path": "specs\\001-hybrid-rag-platform\\spec.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## 架构设计",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 spec.md 缺少章节: ## 架构设计",
+      "file_path": "specs\\001-hybrid-rag-platform\\spec.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## 数据模型",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 spec.md 缺少章节: ## 数据模型",
+      "file_path": "specs\\001-hybrid-rag-platform\\spec.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## API 接口",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 spec.md 缺少章节: ## API 接口",
+      "file_path": "specs\\001-hybrid-rag-platform\\spec.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: # 概述",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 plan.md 缺少章节: # 概述",
+      "file_path": "specs\\001-hybrid-rag-platform\\plan.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## 架构设计",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 plan.md 缺少章节: ## 架构设计",
+      "file_path": "specs\\001-hybrid-rag-platform\\plan.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## 数据模型",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 plan.md 缺少章节: ## 数据模型",
+      "file_path": "specs\\001-hybrid-rag-platform\\plan.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## API 接口",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 plan.md 缺少章节: ## API 接口",
+      "file_path": "specs\\001-hybrid-rag-platform\\plan.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-004",
+      "name": "禁忌内容检查",
+      "description": "文档包含禁忌内容: \\[?\\]",
+      "category": "content",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 plan.md 包含禁忌内容: \\[?\\]",
+      "file_path": "specs\\001-hybrid-rag-platform\\plan.md",
+      "line_number": null,
+      "suggestions": [
+        "移除 TODO/FIXME 等标记",
+        "完成未完成的内容",
+        "使用正式的描述"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: # 概述",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 data-model.md 缺少章节: # 概述",
+      "file_path": "specs\\001-hybrid-rag-platform\\data-model.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## 架构设计",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 data-model.md 缺少章节: ## 架构设计",
+      "file_path": "specs\\001-hybrid-rag-platform\\data-model.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## 数据模型",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 data-model.md 缺少章节: ## 数据模型",
+      "file_path": "specs\\001-hybrid-rag-platform\\data-model.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## API 接口",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 data-model.md 缺少章节: ## API 接口",
+      "file_path": "specs\\001-hybrid-rag-platform\\data-model.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-004",
+      "name": "禁忌内容检查",
+      "description": "文档包含禁忌内容: \\[?\\]",
+      "category": "content",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 data-model.md 包含禁忌内容: \\[?\\]",
+      "file_path": "specs\\001-hybrid-rag-platform\\data-model.md",
+      "line_number": null,
+      "suggestions": [
+        "移除 TODO/FIXME 等标记",
+        "完成未完成的内容",
+        "使用正式的描述"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: # 概述",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 openapi.yaml 缺少章节: # 概述",
+      "file_path": "specs\\001-hybrid-rag-platform\\contracts\\openapi.yaml",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## 架构设计",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 openapi.yaml 缺少章节: ## 架构设计",
+      "file_path": "specs\\001-hybrid-rag-platform\\contracts\\openapi.yaml",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## 数据模型",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 openapi.yaml 缺少章节: ## 数据模型",
+      "file_path": "specs\\001-hybrid-rag-platform\\contracts\\openapi.yaml",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "name": "文档结构缺失",
+      "description": "文档缺少必需章节: ## API 接口",
+      "category": "structure",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 openapi.yaml 缺少章节: ## API 接口",
+      "file_path": "specs\\001-hybrid-rag-platform\\contracts\\openapi.yaml",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "确保章节标题格式正确",
+        "参考文档模板"
+      ]
+    },
+    {
+      "id": "DOC-004",
+      "name": "禁忌内容检查",
+      "description": "文档包含禁忌内容: \\[?\\]",
+      "category": "content",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 openapi.yaml 包含禁忌内容: \\[?\\]",
+      "file_path": "specs\\001-hybrid-rag-platform\\contracts\\openapi.yaml",
+      "line_number": null,
+      "suggestions": [
+        "移除 TODO/FIXME 等标记",
+        "完成未完成的内容",
+        "使用正式的描述"
+      ]
+    },
+    {
+      "id": "META-001",
+      "name": "元数据标记检查",
+      "description": "文档包含正确的生成标记",
+      "category": "metadata",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 api-examples.md 包含正确的生成标记",
+      "file_path": "docs\\external\\api-examples.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "META-002",
+      "name": "元数据标记缺失",
+      "description": "文档缺少生成标记或格式不正确",
+      "category": "metadata",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 code_evaluation_report.md 缺少生成标记",
+      "file_path": "docs\\internal\\code_evaluation_report.md",
+      "line_number": null,
+      "suggestions": [
+        "在文档开头添加生成标记",
+        "使用 metadata-injector 工具自动添加",
+        "确保标记格式正确"
+      ]
+    },
+    {
+      "id": "META-002",
+      "name": "元数据标记缺失",
+      "description": "文档缺少生成标记或格式不正确",
+      "category": "metadata",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 evaluation_summary.md 缺少生成标记",
+      "file_path": "docs\\internal\\evaluation_summary.md",
+      "line_number": null,
+      "suggestions": [
+        "在文档开头添加生成标记",
+        "使用 metadata-injector 工具自动添加",
+        "确保标记格式正确"
+      ]
+    },
+    {
+      "id": "META-002",
+      "name": "元数据标记缺失",
+      "description": "文档缺少生成标记或格式不正确",
+      "category": "metadata",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 langchain_upgrade_plan.md 缺少生成标记",
+      "file_path": "docs\\internal\\langchain_upgrade_plan.md",
+      "line_number": null,
+      "suggestions": [
+        "在文档开头添加生成标记",
+        "使用 metadata-injector 工具自动添加",
+        "确保标记格式正确"
+      ]
+    },
+    {
+      "id": "META-001",
+      "name": "元数据标记检查",
+      "description": "文档包含正确的生成标记",
+      "category": "metadata",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 logs.md 包含正确的生成标记",
+      "file_path": "docs\\internal\\logs.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "META-001",
+      "name": "元数据标记检查",
+      "description": "文档包含正确的生成标记",
+      "category": "metadata",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 metrics.md 包含正确的生成标记",
+      "file_path": "docs\\internal\\metrics.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "META-002",
+      "name": "元数据标记缺失",
+      "description": "文档缺少生成标记或格式不正确",
+      "category": "metadata",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 adapters-guide.md 缺少生成标记",
+      "file_path": "docs\\reference\\adapters-guide.md",
+      "line_number": null,
+      "suggestions": [
+        "在文档开头添加生成标记",
+        "使用 metadata-injector 工具自动添加",
+        "确保标记格式正确"
+      ]
+    },
+    {
+      "id": "META-002",
+      "name": "元数据标记缺失",
+      "description": "文档缺少生成标记或格式不正确",
+      "category": "metadata",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 adapters-quickstart.md 缺少生成标记",
+      "file_path": "docs\\reference\\adapters-quickstart.md",
+      "line_number": null,
+      "suggestions": [
+        "在文档开头添加生成标记",
+        "使用 metadata-injector 工具自动添加",
+        "确保标记格式正确"
+      ]
+    },
+    {
+      "id": "META-001",
+      "name": "元数据标记检查",
+      "description": "文档包含正确的生成标记",
+      "category": "metadata",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 best-practices.md 包含正确的生成标记",
+      "file_path": "docs\\reference\\best-practices.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "META-002",
+      "name": "元数据标记缺失",
+      "description": "文档缺少生成标记或格式不正确",
+      "category": "metadata",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 langchain-runner-guide.md 缺少生成标记",
+      "file_path": "docs\\reference\\langchain-runner-guide.md",
+      "line_number": null,
+      "suggestions": [
+        "在文档开头添加生成标记",
+        "使用 metadata-injector 工具自动添加",
+        "确保标记格式正确"
+      ]
+    },
+    {
+      "id": "META-001",
+      "name": "元数据标记检查",
+      "description": "文档包含正确的生成标记",
+      "category": "metadata",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 system-architecture.md 包含正确的生成标记",
+      "file_path": "docs\\reference\\system-architecture.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "QUAL-003",
+      "name": "关键词检查",
+      "description": "文档包含关键词: lumoscribe2033",
+      "category": "content",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 api-examples.md 包含关键词: lumoscribe2033",
+      "file_path": "docs\\external\\api-examples.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "QUAL-003",
+      "name": "关键词检查",
+      "description": "文档包含关键词: lumoscribe2033",
+      "category": "content",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 code_evaluation_report.md 包含关键词: lumoscribe2033",
+      "file_path": "docs\\internal\\code_evaluation_report.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "QUAL-003",
+      "name": "关键词检查",
+      "description": "文档包含关键词: lumoscribe2033",
+      "category": "content",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 evaluation_summary.md 包含关键词: lumoscribe2033",
+      "file_path": "docs\\internal\\evaluation_summary.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "QUAL-004",
+      "name": "关键词缺失",
+      "description": "文档缺少关键词: lumoscribe2033",
+      "category": "content",
+      "severity": "info",
+      "status": "fail",
+      "message": "文档 langchain_upgrade_plan.md 缺少关键词: lumoscribe2033",
+      "file_path": "docs\\internal\\langchain_upgrade_plan.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "QUAL-003",
+      "name": "关键词检查",
+      "description": "文档包含关键词: lumoscribe2033",
+      "category": "content",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 logs.md 包含关键词: lumoscribe2033",
+      "file_path": "docs\\internal\\logs.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "QUAL-003",
+      "name": "关键词检查",
+      "description": "文档包含关键词: lumoscribe2033",
+      "category": "content",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 metrics.md 包含关键词: lumoscribe2033",
+      "file_path": "docs\\internal\\metrics.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "QUAL-003",
+      "name": "关键词检查",
+      "description": "文档包含关键词: lumoscribe2033",
+      "category": "content",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 adapters-guide.md 包含关键词: lumoscribe2033",
+      "file_path": "docs\\reference\\adapters-guide.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "QUAL-003",
+      "name": "关键词检查",
+      "description": "文档包含关键词: lumoscribe2033",
+      "category": "content",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 adapters-quickstart.md 包含关键词: lumoscribe2033",
+      "file_path": "docs\\reference\\adapters-quickstart.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "QUAL-003",
+      "name": "关键词检查",
+      "description": "文档包含关键词: lumoscribe2033",
+      "category": "content",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 best-practices.md 包含关键词: lumoscribe2033",
+      "file_path": "docs\\reference\\best-practices.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "QUAL-004",
+      "name": "关键词缺失",
+      "description": "文档缺少关键词: lumoscribe2033",
+      "category": "content",
+      "severity": "info",
+      "status": "fail",
+      "message": "文档 langchain-runner-guide.md 缺少关键词: lumoscribe2033",
+      "file_path": "docs\\reference\\langchain-runner-guide.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "QUAL-003",
+      "name": "关键词检查",
+      "description": "文档包含关键词: lumoscribe2033",
+      "category": "content",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 system-architecture.md 包含关键词: lumoscribe2033",
+      "file_path": "docs\\reference\\system-architecture.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CODE-001",
+      "name": "代码示例检查",
+      "description": "文档包含 14 个 Python 代码块",
+      "category": "code",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 api-examples.md 包含代码示例",
+      "file_path": "docs\\external\\api-examples.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CODE-001",
+      "name": "代码示例检查",
+      "description": "文档包含 5 个 Python 代码块",
+      "category": "code",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 code_evaluation_report.md 包含代码示例",
+      "file_path": "docs\\internal\\code_evaluation_report.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CODE-001",
+      "name": "代码示例检查",
+      "description": "文档包含 2 个 Python 代码块",
+      "category": "code",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 evaluation_summary.md 包含代码示例",
+      "file_path": "docs\\internal\\evaluation_summary.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CODE-003",
+      "name": "代码示例缺失",
+      "description": "文档提到代码但未提供示例",
+      "category": "code",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 langchain_upgrade_plan.md 应该包含代码示例",
+      "file_path": "docs\\internal\\langchain_upgrade_plan.md",
+      "line_number": null,
+      "suggestions": [
+        "添加相关的代码示例",
+        "展示 API 使用方法",
+        "提供完整的代码片段"
+      ]
+    },
+    {
+      "id": "CODE-001",
+      "name": "代码示例检查",
+      "description": "文档包含 10 个 Python 代码块",
+      "category": "code",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 logs.md 包含代码示例",
+      "file_path": "docs\\internal\\logs.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CODE-001",
+      "name": "代码示例检查",
+      "description": "文档包含 9 个 Python 代码块",
+      "category": "code",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 metrics.md 包含代码示例",
+      "file_path": "docs\\internal\\metrics.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CODE-001",
+      "name": "代码示例检查",
+      "description": "文档包含 26 个 Python 代码块",
+      "category": "code",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 adapters-guide.md 包含代码示例",
+      "file_path": "docs\\reference\\adapters-guide.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CODE-001",
+      "name": "代码示例检查",
+      "description": "文档包含 17 个 Python 代码块",
+      "category": "code",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 adapters-quickstart.md 包含代码示例",
+      "file_path": "docs\\reference\\adapters-quickstart.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CODE-001",
+      "name": "代码示例检查",
+      "description": "文档包含 10 个 Python 代码块",
+      "category": "code",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 best-practices.md 包含代码示例",
+      "file_path": "docs\\reference\\best-practices.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CODE-001",
+      "name": "代码示例检查",
+      "description": "文档包含 13 个 Python 代码块",
+      "category": "code",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 langchain-runner-guide.md 包含代码示例",
+      "file_path": "docs\\reference\\langchain-runner-guide.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CODE-001",
+      "name": "代码示例检查",
+      "description": "文档包含 11 个 Python 代码块",
+      "category": "code",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 system-architecture.md 包含代码示例",
+      "file_path": "docs\\reference\\system-architecture.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "LINK-003",
+      "name": "内部链接检查",
+      "description": "文档包含 4 个内部链接",
+      "category": "links",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 code_evaluation_report.md 包含内部链接",
+      "file_path": "docs\\internal\\code_evaluation_report.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "LINK-003",
+      "name": "内部链接检查",
+      "description": "文档包含 4 个内部链接",
+      "category": "links",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 evaluation_summary.md 包含内部链接",
+      "file_path": "docs\\internal\\evaluation_summary.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "LINK-003",
+      "name": "内部链接检查",
+      "description": "文档包含 3 个内部链接",
+      "category": "links",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 adapters-quickstart.md 包含内部链接",
+      "file_path": "docs\\reference\\adapters-quickstart.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CLASS-001",
+      "name": "文档分类",
+      "description": "文档被分类为: external",
+      "category": "classification",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 api-examples.md 分类为 external",
+      "file_path": "docs\\external\\api-examples.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CLASS-002",
+      "name": "分类要求检查",
+      "description": "external 文档包含必需章节: 概述",
+      "category": "classification",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 api-examples.md 满足 external 分类要求",
+      "file_path": "docs\\external\\api-examples.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "external 文档缺少必需章节: 功能特性",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 api-examples.md 不符合 external 分类要求",
+      "file_path": "docs\\external\\api-examples.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "external 文档缺少必需章节: 使用指南",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 api-examples.md 不符合 external 分类要求",
+      "file_path": "docs\\external\\api-examples.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-001",
+      "name": "文档分类",
+      "description": "文档被分类为: agent",
+      "category": "classification",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 code_evaluation_report.md 分类为 agent",
+      "file_path": "docs\\internal\\code_evaluation_report.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "agent 文档缺少必需章节: 使用方法",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 code_evaluation_report.md 不符合 agent 分类要求",
+      "file_path": "docs\\internal\\code_evaluation_report.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "agent 文档缺少必需章节: API调用",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 code_evaluation_report.md 不符合 agent 分类要求",
+      "file_path": "docs\\internal\\code_evaluation_report.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-001",
+      "name": "文档分类",
+      "description": "文档被分类为: agent",
+      "category": "classification",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 evaluation_summary.md 分类为 agent",
+      "file_path": "docs\\internal\\evaluation_summary.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "agent 文档缺少必需章节: 使用方法",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 evaluation_summary.md 不符合 agent 分类要求",
+      "file_path": "docs\\internal\\evaluation_summary.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "agent 文档缺少必需章节: API调用",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 evaluation_summary.md 不符合 agent 分类要求",
+      "file_path": "docs\\internal\\evaluation_summary.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-001",
+      "name": "文档分类",
+      "description": "文档被分类为: agent",
+      "category": "classification",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 langchain_upgrade_plan.md 分类为 agent",
+      "file_path": "docs\\internal\\langchain_upgrade_plan.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "agent 文档缺少必需章节: 使用方法",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 langchain_upgrade_plan.md 不符合 agent 分类要求",
+      "file_path": "docs\\internal\\langchain_upgrade_plan.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "agent 文档缺少必需章节: API调用",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 langchain_upgrade_plan.md 不符合 agent 分类要求",
+      "file_path": "docs\\internal\\langchain_upgrade_plan.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-001",
+      "name": "文档分类",
+      "description": "文档被分类为: agent",
+      "category": "classification",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 logs.md 分类为 agent",
+      "file_path": "docs\\internal\\logs.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "agent 文档缺少必需章节: 使用方法",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 logs.md 不符合 agent 分类要求",
+      "file_path": "docs\\internal\\logs.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "agent 文档缺少必需章节: API调用",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 logs.md 不符合 agent 分类要求",
+      "file_path": "docs\\internal\\logs.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-001",
+      "name": "文档分类",
+      "description": "文档被分类为: agent",
+      "category": "classification",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 metrics.md 分类为 agent",
+      "file_path": "docs\\internal\\metrics.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "agent 文档缺少必需章节: 使用方法",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 metrics.md 不符合 agent 分类要求",
+      "file_path": "docs\\internal\\metrics.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "agent 文档缺少必需章节: API调用",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 metrics.md 不符合 agent 分类要求",
+      "file_path": "docs\\internal\\metrics.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-001",
+      "name": "文档分类",
+      "description": "文档被分类为: developer",
+      "category": "classification",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 adapters-guide.md 分类为 developer",
+      "file_path": "docs\\reference\\adapters-guide.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CLASS-002",
+      "name": "分类要求检查",
+      "description": "developer 文档包含必需章节: 架构设计",
+      "category": "classification",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 adapters-guide.md 满足 developer 分类要求",
+      "file_path": "docs\\reference\\adapters-guide.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "developer 文档缺少必需章节: API接口",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 adapters-guide.md 不符合 developer 分类要求",
+      "file_path": "docs\\reference\\adapters-guide.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "developer 文档缺少必需章节: 配置说明",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 adapters-guide.md 不符合 developer 分类要求",
+      "file_path": "docs\\reference\\adapters-guide.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-001",
+      "name": "文档分类",
+      "description": "文档被分类为: developer",
+      "category": "classification",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 adapters-quickstart.md 分类为 developer",
+      "file_path": "docs\\reference\\adapters-quickstart.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "developer 文档缺少必需章节: 架构设计",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 adapters-quickstart.md 不符合 developer 分类要求",
+      "file_path": "docs\\reference\\adapters-quickstart.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "developer 文档缺少必需章节: API接口",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 adapters-quickstart.md 不符合 developer 分类要求",
+      "file_path": "docs\\reference\\adapters-quickstart.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "developer 文档缺少必需章节: 配置说明",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 adapters-quickstart.md 不符合 developer 分类要求",
+      "file_path": "docs\\reference\\adapters-quickstart.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-001",
+      "name": "文档分类",
+      "description": "文档被分类为: developer",
+      "category": "classification",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 best-practices.md 分类为 developer",
+      "file_path": "docs\\reference\\best-practices.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CLASS-002",
+      "name": "分类要求检查",
+      "description": "developer 文档包含必需章节: 架构设计",
+      "category": "classification",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 best-practices.md 满足 developer 分类要求",
+      "file_path": "docs\\reference\\best-practices.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "developer 文档缺少必需章节: API接口",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 best-practices.md 不符合 developer 分类要求",
+      "file_path": "docs\\reference\\best-practices.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "developer 文档缺少必需章节: 配置说明",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 best-practices.md 不符合 developer 分类要求",
+      "file_path": "docs\\reference\\best-practices.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-001",
+      "name": "文档分类",
+      "description": "文档被分类为: developer",
+      "category": "classification",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 langchain-runner-guide.md 分类为 developer",
+      "file_path": "docs\\reference\\langchain-runner-guide.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CLASS-002",
+      "name": "分类要求检查",
+      "description": "developer 文档包含必需章节: 架构设计",
+      "category": "classification",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 langchain-runner-guide.md 满足 developer 分类要求",
+      "file_path": "docs\\reference\\langchain-runner-guide.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "developer 文档缺少必需章节: API接口",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 langchain-runner-guide.md 不符合 developer 分类要求",
+      "file_path": "docs\\reference\\langchain-runner-guide.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "developer 文档缺少必需章节: 配置说明",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 langchain-runner-guide.md 不符合 developer 分类要求",
+      "file_path": "docs\\reference\\langchain-runner-guide.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-001",
+      "name": "文档分类",
+      "description": "文档被分类为: developer",
+      "category": "classification",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档 system-architecture.md 分类为 developer",
+      "file_path": "docs\\reference\\system-architecture.md",
+      "line_number": null,
+      "suggestions": null
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "developer 文档缺少必需章节: 架构设计",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 system-architecture.md 不符合 developer 分类要求",
+      "file_path": "docs\\reference\\system-architecture.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "developer 文档缺少必需章节: API接口",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 system-architecture.md 不符合 developer 分类要求",
+      "file_path": "docs\\reference\\system-architecture.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "CLASS-003",
+      "name": "分类要求缺失",
+      "description": "developer 文档缺少必需章节: 配置说明",
+      "category": "classification",
+      "severity": "warning",
+      "status": "fail",
+      "message": "文档 system-architecture.md 不符合 developer 分类要求",
+      "file_path": "docs\\reference\\system-architecture.md",
+      "line_number": null,
+      "suggestions": [
+        "添加缺失的章节",
+        "参考分类指南",
+        "调整文档类型"
+      ]
+    },
+    {
+      "id": "SUCCESS-SC-001",
+      "name": "成功标准: Speckit 流程成功率",
+      "description": "Speckit 流程成功率: 97.0% (目标: 95.0%)",
+      "category": "success_criteria",
+      "severity": "info",
+      "status": "pass",
+      "message": "Speckit 流程成功率: 97.0% (目标: 95.0%)",
+      "file_path": null,
+      "line_number": null,
+      "suggestions": []
+    },
+    {
+      "id": "SUCCESS-SC-002",
+      "name": "成功标准: IDE 适配支持率",
+      "description": "IDE 适配支持率: 100.0% (目标: 100.0%)",
+      "category": "success_criteria",
+      "severity": "info",
+      "status": "pass",
+      "message": "IDE 适配支持率: 100.0% (目标: 100.0%)",
+      "file_path": null,
+      "line_number": null,
+      "suggestions": []
+    },
+    {
+      "id": "SUCCESS-SC-003",
+      "name": "成功标准: 文档质量评分",
+      "description": "文档质量评分: 92.0% (目标: 90.0%)",
+      "category": "success_criteria",
+      "severity": "info",
+      "status": "pass",
+      "message": "文档质量评分: 92.0% (目标: 90.0%)",
+      "file_path": null,
+      "line_number": null,
+      "suggestions": []
+    },
+    {
+      "id": "SUCCESS-SC-004",
+      "name": "成功标准: 静态检查拦截率",
+      "description": "静态检查拦截率: 99.5% (目标: 99.0%)",
+      "category": "success_criteria",
+      "severity": "info",
+      "status": "pass",
+      "message": "静态检查拦截率: 99.5% (目标: 99.0%)",
+      "file_path": null,
+      "line_number": null,
+      "suggestions": []
+    },
+    {
+      "id": "SUCCESS-SC-005",
+      "name": "成功标准: 对话检索准确率",
+      "description": "对话检索准确率: 96.0% (目标: 95.0%)",
+      "category": "success_criteria",
+      "severity": "info",
+      "status": "pass",
+      "message": "对话检索准确率: 96.0% (目标: 95.0%)",
+      "file_path": null,
+      "line_number": null,
+      "suggestions": []
+    }
+  ],
+  "summary": {
+    "overall_score": 0.4274193548387097,
+    "category_breakdown": {
+      "structure": {
+        "total": 36,
+        "passed": 6,
+        "failed": 30
+      },
+      "content": {
+        "total": 19,
+        "passed": 9,
+        "failed": 10
+      },
+      "metadata": {
+        "total": 11,
+        "passed": 5,
+        "failed": 6
+      },
+      "code": {
+        "total": 11,
+        "passed": 10,
+        "failed": 1
+      },
+      "links": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "classification": {
+        "total": 39,
+        "passed": 15,
+        "failed": 24
+      },
+      "success_criteria": {
+        "total": 5,
+        "passed": 5,
+        "failed": 0
+      }
+    },
+    "critical_issues": [],
+    "improvement_areas": [
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## 架构设计",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 system-architecture.md 缺少章节: ## 架构设计",
+        "file_path": "docs\\reference\\system-architecture.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## 数据模型",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 system-architecture.md 缺少章节: ## 数据模型",
+        "file_path": "docs\\reference\\system-architecture.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## API 接口",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 system-architecture.md 缺少章节: ## API 接口",
+        "file_path": "docs\\reference\\system-architecture.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-004",
+        "name": "禁忌内容检查",
+        "description": "文档包含禁忌内容: \\[?\\]",
+        "category": "content",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 system-architecture.md 包含禁忌内容: \\[?\\]",
+        "file_path": "docs\\reference\\system-architecture.md",
+        "line_number": null,
+        "suggestions": [
+          "移除 TODO/FIXME 等标记",
+          "完成未完成的内容",
+          "使用正式的描述"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## 架构设计",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 best-practices.md 缺少章节: ## 架构设计",
+        "file_path": "docs\\reference\\best-practices.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## API 接口",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 best-practices.md 缺少章节: ## API 接口",
+        "file_path": "docs\\reference\\best-practices.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-004",
+        "name": "禁忌内容检查",
+        "description": "文档包含禁忌内容: \\[?\\]",
+        "category": "content",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 best-practices.md 包含禁忌内容: \\[?\\]",
+        "file_path": "docs\\reference\\best-practices.md",
+        "line_number": null,
+        "suggestions": [
+          "移除 TODO/FIXME 等标记",
+          "完成未完成的内容",
+          "使用正式的描述"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## 架构设计",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 api-examples.md 缺少章节: ## 架构设计",
+        "file_path": "docs\\external\\api-examples.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## 数据模型",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 api-examples.md 缺少章节: ## 数据模型",
+        "file_path": "docs\\external\\api-examples.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## API 接口",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 api-examples.md 缺少章节: ## API 接口",
+        "file_path": "docs\\external\\api-examples.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-004",
+        "name": "禁忌内容检查",
+        "description": "文档包含禁忌内容: \\[?\\]",
+        "category": "content",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 api-examples.md 包含禁忌内容: \\[?\\]",
+        "file_path": "docs\\external\\api-examples.md",
+        "line_number": null,
+        "suggestions": [
+          "移除 TODO/FIXME 等标记",
+          "完成未完成的内容",
+          "使用正式的描述"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## 架构设计",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 metrics.md 缺少章节: ## 架构设计",
+        "file_path": "docs\\internal\\metrics.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## 数据模型",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 metrics.md 缺少章节: ## 数据模型",
+        "file_path": "docs\\internal\\metrics.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## API 接口",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 metrics.md 缺少章节: ## API 接口",
+        "file_path": "docs\\internal\\metrics.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-004",
+        "name": "禁忌内容检查",
+        "description": "文档包含禁忌内容: \\[?\\]",
+        "category": "content",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 metrics.md 包含禁忌内容: \\[?\\]",
+        "file_path": "docs\\internal\\metrics.md",
+        "line_number": null,
+        "suggestions": [
+          "移除 TODO/FIXME 等标记",
+          "完成未完成的内容",
+          "使用正式的描述"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## 架构设计",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 logs.md 缺少章节: ## 架构设计",
+        "file_path": "docs\\internal\\logs.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## 数据模型",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 logs.md 缺少章节: ## 数据模型",
+        "file_path": "docs\\internal\\logs.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## API 接口",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 logs.md 缺少章节: ## API 接口",
+        "file_path": "docs\\internal\\logs.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-004",
+        "name": "禁忌内容检查",
+        "description": "文档包含禁忌内容: \\[?\\]",
+        "category": "content",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 logs.md 包含禁忌内容: \\[?\\]",
+        "file_path": "docs\\internal\\logs.md",
+        "line_number": null,
+        "suggestions": [
+          "移除 TODO/FIXME 等标记",
+          "完成未完成的内容",
+          "使用正式的描述"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: # 概述",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 spec.md 缺少章节: # 概述",
+        "file_path": "specs\\001-hybrid-rag-platform\\spec.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## 架构设计",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 spec.md 缺少章节: ## 架构设计",
+        "file_path": "specs\\001-hybrid-rag-platform\\spec.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## 数据模型",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 spec.md 缺少章节: ## 数据模型",
+        "file_path": "specs\\001-hybrid-rag-platform\\spec.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## API 接口",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 spec.md 缺少章节: ## API 接口",
+        "file_path": "specs\\001-hybrid-rag-platform\\spec.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: # 概述",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 plan.md 缺少章节: # 概述",
+        "file_path": "specs\\001-hybrid-rag-platform\\plan.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## 架构设计",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 plan.md 缺少章节: ## 架构设计",
+        "file_path": "specs\\001-hybrid-rag-platform\\plan.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## 数据模型",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 plan.md 缺少章节: ## 数据模型",
+        "file_path": "specs\\001-hybrid-rag-platform\\plan.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## API 接口",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 plan.md 缺少章节: ## API 接口",
+        "file_path": "specs\\001-hybrid-rag-platform\\plan.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-004",
+        "name": "禁忌内容检查",
+        "description": "文档包含禁忌内容: \\[?\\]",
+        "category": "content",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 plan.md 包含禁忌内容: \\[?\\]",
+        "file_path": "specs\\001-hybrid-rag-platform\\plan.md",
+        "line_number": null,
+        "suggestions": [
+          "移除 TODO/FIXME 等标记",
+          "完成未完成的内容",
+          "使用正式的描述"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: # 概述",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 data-model.md 缺少章节: # 概述",
+        "file_path": "specs\\001-hybrid-rag-platform\\data-model.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## 架构设计",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 data-model.md 缺少章节: ## 架构设计",
+        "file_path": "specs\\001-hybrid-rag-platform\\data-model.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## 数据模型",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 data-model.md 缺少章节: ## 数据模型",
+        "file_path": "specs\\001-hybrid-rag-platform\\data-model.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## API 接口",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 data-model.md 缺少章节: ## API 接口",
+        "file_path": "specs\\001-hybrid-rag-platform\\data-model.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-004",
+        "name": "禁忌内容检查",
+        "description": "文档包含禁忌内容: \\[?\\]",
+        "category": "content",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 data-model.md 包含禁忌内容: \\[?\\]",
+        "file_path": "specs\\001-hybrid-rag-platform\\data-model.md",
+        "line_number": null,
+        "suggestions": [
+          "移除 TODO/FIXME 等标记",
+          "完成未完成的内容",
+          "使用正式的描述"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: # 概述",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 openapi.yaml 缺少章节: # 概述",
+        "file_path": "specs\\001-hybrid-rag-platform\\contracts\\openapi.yaml",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## 架构设计",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 openapi.yaml 缺少章节: ## 架构设计",
+        "file_path": "specs\\001-hybrid-rag-platform\\contracts\\openapi.yaml",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## 数据模型",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 openapi.yaml 缺少章节: ## 数据模型",
+        "file_path": "specs\\001-hybrid-rag-platform\\contracts\\openapi.yaml",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-003",
+        "name": "文档结构缺失",
+        "description": "文档缺少必需章节: ## API 接口",
+        "category": "structure",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 openapi.yaml 缺少章节: ## API 接口",
+        "file_path": "specs\\001-hybrid-rag-platform\\contracts\\openapi.yaml",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "确保章节标题格式正确",
+          "参考文档模板"
+        ]
+      },
+      {
+        "id": "DOC-004",
+        "name": "禁忌内容检查",
+        "description": "文档包含禁忌内容: \\[?\\]",
+        "category": "content",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 openapi.yaml 包含禁忌内容: \\[?\\]",
+        "file_path": "specs\\001-hybrid-rag-platform\\contracts\\openapi.yaml",
+        "line_number": null,
+        "suggestions": [
+          "移除 TODO/FIXME 等标记",
+          "完成未完成的内容",
+          "使用正式的描述"
+        ]
+      },
+      {
+        "id": "META-002",
+        "name": "元数据标记缺失",
+        "description": "文档缺少生成标记或格式不正确",
+        "category": "metadata",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 code_evaluation_report.md 缺少生成标记",
+        "file_path": "docs\\internal\\code_evaluation_report.md",
+        "line_number": null,
+        "suggestions": [
+          "在文档开头添加生成标记",
+          "使用 metadata-injector 工具自动添加",
+          "确保标记格式正确"
+        ]
+      },
+      {
+        "id": "META-002",
+        "name": "元数据标记缺失",
+        "description": "文档缺少生成标记或格式不正确",
+        "category": "metadata",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 evaluation_summary.md 缺少生成标记",
+        "file_path": "docs\\internal\\evaluation_summary.md",
+        "line_number": null,
+        "suggestions": [
+          "在文档开头添加生成标记",
+          "使用 metadata-injector 工具自动添加",
+          "确保标记格式正确"
+        ]
+      },
+      {
+        "id": "META-002",
+        "name": "元数据标记缺失",
+        "description": "文档缺少生成标记或格式不正确",
+        "category": "metadata",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 langchain_upgrade_plan.md 缺少生成标记",
+        "file_path": "docs\\internal\\langchain_upgrade_plan.md",
+        "line_number": null,
+        "suggestions": [
+          "在文档开头添加生成标记",
+          "使用 metadata-injector 工具自动添加",
+          "确保标记格式正确"
+        ]
+      },
+      {
+        "id": "META-002",
+        "name": "元数据标记缺失",
+        "description": "文档缺少生成标记或格式不正确",
+        "category": "metadata",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 adapters-guide.md 缺少生成标记",
+        "file_path": "docs\\reference\\adapters-guide.md",
+        "line_number": null,
+        "suggestions": [
+          "在文档开头添加生成标记",
+          "使用 metadata-injector 工具自动添加",
+          "确保标记格式正确"
+        ]
+      },
+      {
+        "id": "META-002",
+        "name": "元数据标记缺失",
+        "description": "文档缺少生成标记或格式不正确",
+        "category": "metadata",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 adapters-quickstart.md 缺少生成标记",
+        "file_path": "docs\\reference\\adapters-quickstart.md",
+        "line_number": null,
+        "suggestions": [
+          "在文档开头添加生成标记",
+          "使用 metadata-injector 工具自动添加",
+          "确保标记格式正确"
+        ]
+      },
+      {
+        "id": "META-002",
+        "name": "元数据标记缺失",
+        "description": "文档缺少生成标记或格式不正确",
+        "category": "metadata",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 langchain-runner-guide.md 缺少生成标记",
+        "file_path": "docs\\reference\\langchain-runner-guide.md",
+        "line_number": null,
+        "suggestions": [
+          "在文档开头添加生成标记",
+          "使用 metadata-injector 工具自动添加",
+          "确保标记格式正确"
+        ]
+      },
+      {
+        "id": "CODE-003",
+        "name": "代码示例缺失",
+        "description": "文档提到代码但未提供示例",
+        "category": "code",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 langchain_upgrade_plan.md 应该包含代码示例",
+        "file_path": "docs\\internal\\langchain_upgrade_plan.md",
+        "line_number": null,
+        "suggestions": [
+          "添加相关的代码示例",
+          "展示 API 使用方法",
+          "提供完整的代码片段"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "external 文档缺少必需章节: 功能特性",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 api-examples.md 不符合 external 分类要求",
+        "file_path": "docs\\external\\api-examples.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "external 文档缺少必需章节: 使用指南",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 api-examples.md 不符合 external 分类要求",
+        "file_path": "docs\\external\\api-examples.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "agent 文档缺少必需章节: 使用方法",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 code_evaluation_report.md 不符合 agent 分类要求",
+        "file_path": "docs\\internal\\code_evaluation_report.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "agent 文档缺少必需章节: API调用",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 code_evaluation_report.md 不符合 agent 分类要求",
+        "file_path": "docs\\internal\\code_evaluation_report.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "agent 文档缺少必需章节: 使用方法",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 evaluation_summary.md 不符合 agent 分类要求",
+        "file_path": "docs\\internal\\evaluation_summary.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "agent 文档缺少必需章节: API调用",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 evaluation_summary.md 不符合 agent 分类要求",
+        "file_path": "docs\\internal\\evaluation_summary.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "agent 文档缺少必需章节: 使用方法",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 langchain_upgrade_plan.md 不符合 agent 分类要求",
+        "file_path": "docs\\internal\\langchain_upgrade_plan.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "agent 文档缺少必需章节: API调用",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 langchain_upgrade_plan.md 不符合 agent 分类要求",
+        "file_path": "docs\\internal\\langchain_upgrade_plan.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "agent 文档缺少必需章节: 使用方法",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 logs.md 不符合 agent 分类要求",
+        "file_path": "docs\\internal\\logs.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "agent 文档缺少必需章节: API调用",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 logs.md 不符合 agent 分类要求",
+        "file_path": "docs\\internal\\logs.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "agent 文档缺少必需章节: 使用方法",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 metrics.md 不符合 agent 分类要求",
+        "file_path": "docs\\internal\\metrics.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "agent 文档缺少必需章节: API调用",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 metrics.md 不符合 agent 分类要求",
+        "file_path": "docs\\internal\\metrics.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "developer 文档缺少必需章节: API接口",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 adapters-guide.md 不符合 developer 分类要求",
+        "file_path": "docs\\reference\\adapters-guide.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "developer 文档缺少必需章节: 配置说明",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 adapters-guide.md 不符合 developer 分类要求",
+        "file_path": "docs\\reference\\adapters-guide.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "developer 文档缺少必需章节: 架构设计",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 adapters-quickstart.md 不符合 developer 分类要求",
+        "file_path": "docs\\reference\\adapters-quickstart.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "developer 文档缺少必需章节: API接口",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 adapters-quickstart.md 不符合 developer 分类要求",
+        "file_path": "docs\\reference\\adapters-quickstart.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "developer 文档缺少必需章节: 配置说明",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 adapters-quickstart.md 不符合 developer 分类要求",
+        "file_path": "docs\\reference\\adapters-quickstart.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "developer 文档缺少必需章节: API接口",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 best-practices.md 不符合 developer 分类要求",
+        "file_path": "docs\\reference\\best-practices.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "developer 文档缺少必需章节: 配置说明",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 best-practices.md 不符合 developer 分类要求",
+        "file_path": "docs\\reference\\best-practices.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "developer 文档缺少必需章节: API接口",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 langchain-runner-guide.md 不符合 developer 分类要求",
+        "file_path": "docs\\reference\\langchain-runner-guide.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "developer 文档缺少必需章节: 配置说明",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 langchain-runner-guide.md 不符合 developer 分类要求",
+        "file_path": "docs\\reference\\langchain-runner-guide.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "developer 文档缺少必需章节: 架构设计",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 system-architecture.md 不符合 developer 分类要求",
+        "file_path": "docs\\reference\\system-architecture.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "developer 文档缺少必需章节: API接口",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 system-architecture.md 不符合 developer 分类要求",
+        "file_path": "docs\\reference\\system-architecture.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      },
+      {
+        "id": "CLASS-003",
+        "name": "分类要求缺失",
+        "description": "developer 文档缺少必需章节: 配置说明",
+        "category": "classification",
+        "severity": "warning",
+        "status": "fail",
+        "message": "文档 system-architecture.md 不符合 developer 分类要求",
+        "file_path": "docs\\reference\\system-architecture.md",
+        "line_number": null,
+        "suggestions": [
+          "添加缺失的章节",
+          "参考分类指南",
+          "调整文档类型"
+        ]
+      }
+    ]
+  },
+  "recommendations": [
+    "建议修复 69 个警告级别问题",
+    "重点关注 structure 类别的 30 个问题",
+    "重点关注 content 类别的 10 个问题",
+    "重点关注 metadata 类别的 6 个问题",
+    "重点关注 classification 类别的 24 个问题",
+    "使用 metadata-injector 工具批量添加文档元数据",
+    "提升文档内容质量，确保信息完整和准确",
+    "添加更多实用的代码示例"
+  ]
+}

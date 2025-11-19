@@ -1,0 +1,68 @@
+﻿# lumoscribe2033 开发指南
+
+基于所有功能计划自动生成. 最后更新时间: 2025-11-14
+
+## 活跃技术
+- Python 3.12 (services/CLI/agents) + LangChain 1.0、LlamaIndex、Typer、Rich
+- FastAPI + FastMCP + Arq 组成 HTTP/MCP/异步执行层
+- 多模型路由: OpenAI 兼容 API + 本地 Ollama (由 LangChain RouterChain 驱动)
+- SQLite + SQLModel、Chroma、NetworkX 负责结构化/向量/图存储
+- Node.js 20 + ESLint 维护 IDE 命令脚本
+
+## 项目结构
+```
+repo-root/
+├── src/
+│   ├── framework/                # 编排、RAG、适配层、存储抽象
+│   ├── domain/                   # pipeline/doc_review/compliance/knowledge
+│   ├── api/                      # FastAPI 入口
+│   ├── workers/                  # Arq 任务
+│   └── cli/                      # Typer CLI
+├── tests/                        # unit / integration / contract / cli_snapshots
+├── docs/
+│   ├── internal/
+│   ├── external/
+│   └── reference/ (vendor|prompts)
+├── data/
+│   ├── imports/
+│   ├── persistence/
+│   └── reference_samples/
+├── vector/chroma/
+├── graph/snapshots/
+└── ide-packages/
+```
+
+## 命令
+- `conda activate lumoscribe2033` (开发推荐, 部署可用系统 Python)
+- `uvicorn src.api.main:app --reload --port 8080`
+- `arq workers.settings.WorkerSettings`
+- `python -m src.cli run-pipeline samples/phase1.md`
+- `python -m src.cli generate-ide-package --ide cursor`
+- `python -m src.cli generate-ide-package --ide roocode`
+- `python -m src.cli evaluate-docs --glob "specs/**/*.md"`
+- `python -m src.cli import-conversations --source cursor --path C:\logs\cursor`
+- `ruff check src && mypy src`
+- `pytest`
+- `npm run lint --prefix tooling/eslint`
+- `speckit.constitution / speckit.specify / speckit.plan / speckit.tasks / speckit.analyze`
+
+## 代码风格
+- Python 3.12: 遵循 PEP 8 + Ruff 默认规则, 必须通过 `ruff`/`mypy`/`pytest`
+- Node.js 20: ESLint + Prettier(如适用), IDE 命令脚本保持 JSON/MD 结构清晰
+- 所有自动生成文件需在头部标注“生成命令 + 时间戳”(章程 P4), 可使用 `python -m src.cli metadata-injector --files ...` 批量处理
+- 文档/注释使用中文; 单个文件 < 4000 行; 临时文件禁止提交
+
+## 工作流与协作
+1. speckit 工作流必须按顺序运行; 每次提交前执行 `/speckit.analyze` 以保持 spec/plan/tasks 同步。
+2. 人机协作: 先让 Cursor/LLM 生成草稿, 再由人审查、将可靠做法写入 `docs/reference/` 或最佳实践库; 重要对话需要导入 `data/reference_samples/` 以备追溯。
+3. 运行 speckit/IDE/评估命令后, 更新 `docs/internal/logs.md` 并触发 `python -m src.cli collect-metrics` 记录 SC-001~005 指标。
+
+## 指标与追溯
+- 成功率/召回率等指标写入 `ComplianceReport` + `docs/internal/metrics.md`; 未达标需在 PR 中给出说明与改进计划。
+- 静态检查告警必须附带 `ConversationRecord` 链接, 以便查明是哪个对话指令造成问题; 使用 `python -m src.cli import-conversations` 保持日志完整。
+
+## 最近变更
+- 001-hybrid-rag-platform: 引入 LangChain 1.0 + LlamaIndex + FastAPI/FastMCP/Arq + 多存储分层, 补充阶段 7 指标采集与文件元数据守卫
+
+<!-- 手动添加内容开始 -->
+<!-- 手动添加内容结束 -->

@@ -1,0 +1,134 @@
+{
+  "contract_test_info": {
+    "generated_at": "2025-11-17T12:00:00Z",
+    "openapi_spec": "specs\\001-hybrid-rag-platform\\contracts\\openapi.yaml",
+    "total_endpoints": 6,
+    "passed_endpoints": 0,
+    "failed_endpoints": 6,
+    "overall_score": 0.0
+  },
+  "endpoint_results": [
+    {
+      "endpoint": "/pipeline/run",
+      "method": "POST",
+      "passed": false,
+      "score": 0.0,
+      "status_code_match": false,
+      "response_model_match": false,
+      "example_match": false,
+      "errors": [
+        "端点 POST /pipeline/run 在实际路由中不存在"
+      ],
+      "warnings": []
+    },
+    {
+      "endpoint": "/ide-packages/generate",
+      "method": "POST",
+      "passed": false,
+      "score": 0.0,
+      "status_code_match": false,
+      "response_model_match": false,
+      "example_match": false,
+      "errors": [
+        "端点 POST /ide-packages/generate 在实际路由中不存在"
+      ],
+      "warnings": []
+    },
+    {
+      "endpoint": "/documents/evaluate",
+      "method": "POST",
+      "passed": false,
+      "score": 0.0,
+      "status_code_match": false,
+      "response_model_match": false,
+      "example_match": false,
+      "errors": [
+        "端点 POST /documents/evaluate 在实际路由中不存在"
+      ],
+      "warnings": []
+    },
+    {
+      "endpoint": "/conversations/import",
+      "method": "POST",
+      "passed": false,
+      "score": 0.0,
+      "status_code_match": false,
+      "response_model_match": false,
+      "example_match": false,
+      "errors": [
+        "端点 POST /conversations/import 在实际路由中不存在"
+      ],
+      "warnings": []
+    },
+    {
+      "endpoint": "/best-practices/search",
+      "method": "GET",
+      "passed": false,
+      "score": 0.0,
+      "status_code_match": false,
+      "response_model_match": false,
+      "example_match": false,
+      "errors": [
+        "端点 GET /best-practices/search 在实际路由中不存在"
+      ],
+      "warnings": []
+    },
+    {
+      "endpoint": "/compliance/reports/{submission_id}",
+      "method": "GET",
+      "passed": false,
+      "score": 0.0,
+      "status_code_match": false,
+      "response_model_match": false,
+      "example_match": false,
+      "errors": [
+        "端点 GET /compliance/reports/{submission_id} 在实际路由中不存在"
+      ],
+      "warnings": []
+    }
+  ],
+  "summary_by_path": {
+    "/pipeline/run": {
+      "endpoints": 1,
+      "passed": 0,
+      "failed": 1,
+      "average_score": 0.0
+    },
+    "/ide-packages/generate": {
+      "endpoints": 1,
+      "passed": 0,
+      "failed": 1,
+      "average_score": 0.0
+    },
+    "/documents/evaluate": {
+      "endpoints": 1,
+      "passed": 0,
+      "failed": 1,
+      "average_score": 0.0
+    },
+    "/conversations/import": {
+      "endpoints": 1,
+      "passed": 0,
+      "failed": 1,
+      "average_score": 0.0
+    },
+    "/best-practices/search": {
+      "endpoints": 1,
+      "passed": 0,
+      "failed": 1,
+      "average_score": 0.0
+    },
+    "/compliance/reports/{submission_id}": {
+      "endpoints": 1,
+      "passed": 0,
+      "failed": 1,
+      "average_score": 0.0
+    }
+  },
+  "recommendations": [
+    "修复 6 个端点的契约不一致问题",
+    "统一 6 个端点的状态码定义",
+    "完善 6 个端点的响应模型定义",
+    "为 6 个端点添加请求/响应示例"
+  ]
+}

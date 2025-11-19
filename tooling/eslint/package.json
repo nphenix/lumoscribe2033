@@ -1,0 +1,21 @@
+{
+  "name": "lumoscribe2033-eslint",
+  "version": "1.0.0",
+  "description": "ESLint configuration for lumoscribe2033 project",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ../.. --ext .js,.ts,.jsx,.tsx",
+    "lint:fix": "eslint ../.. --ext .js,.ts,.jsx,.tsx --fix",
+    "lint:check": "eslint ../.. --ext .js,.ts,.jsx,.tsx --check"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-prettier": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
