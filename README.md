@@ -152,7 +152,7 @@ curl http://localhost:8080/health
 ## 🛠️ 核心技术栈
 
 ### 🤖 AI 与 RAG
-- **LangChain 1.0.6** + **langchain-classic 1.0.0** - 代理创建和 LLM 编排
+- **LangChain 1.0.6** - 代理创建和 LLM 编排
 - **LangChain Community 0.4.1** - LangChain 生态组件
 - **LangChain OpenAI 1.0.2** - OpenAI 集成
 - **LlamaIndex 0.14.8** - RAG 和向量索引管理
